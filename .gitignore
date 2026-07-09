@@ -1,0 +1,11 @@
+# Godot caches
+.godot/
+
+# Authoring sources stay local (packed .blend catalogs, Blender backups)
+*.blend
+*.blend1
+
+# Secrets (FALAI_KEY etc. for the asset-generation scripts)
+.env
+
+__pycache__/
