@@ -1107,7 +1107,8 @@ func _level_clear() -> void:
 	else:
 		state = "final"
 		audio.music("music_victory")
-		overlay.text = "ALL TERRITORY SECURED"
+		overlay.text = "ALL TERRITORY SECURED
+SCORE %d" % score
 		overlay.add_theme_color_override("font_color", Color(0.2, 0.95, 1.0))
 		overlay.visible = true
 		var td := create_tween()
@@ -1408,7 +1409,8 @@ func _game_over(msg: String) -> void:
 	audio.loop_stop("cut_loop")
 	audio.play("game_over")
 	audio.music_duck(-12.0)
-	overlay.text = msg
+	overlay.text = msg + "
+SCORE %d" % score
 	overlay.add_theme_color_override("font_color", Color(1.0, 0.25, 0.35))
 	overlay.visible = true
 	var td := create_tween()
